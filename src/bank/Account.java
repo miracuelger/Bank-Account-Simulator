@@ -29,10 +29,12 @@ public class Account {
     }
 
     public void deposit(BigDecimal amount) {
-        balance.add(amount);
+        var result = balance.add(amount);
+        balance = result;
     }
 
     public void withdraw(BigDecimal amount) {
-        balance.subtract(amount);
+        var result = balance.subtract(amount);
+        balance = result;
     }
 }

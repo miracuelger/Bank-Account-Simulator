@@ -1,3 +1,5 @@
+import bank.Account;
+import java.math.BigDecimal;
 
 public class Main {
     static void main(String[] args) {
@@ -5,6 +7,12 @@ public class Main {
         System.out.println("================");
         System.out.println(" BANKING SYSTEM ");
         System.out.println("================");
+
+        Account myAccount = new Account("AT0001", "Mirac Ülger");
+        myAccount.deposit(new BigDecimal("99.99"));
+        myAccount.withdraw(new BigDecimal("49.99"));
+        myAccount.getBalance();
+        System.out.println(myAccount.getBalance());
     }
 
 
