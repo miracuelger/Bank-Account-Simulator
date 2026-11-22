@@ -1,4 +1,7 @@
 import bank.Account;
+import bank.Transaction;
+import bank.TransactionType;
+
 import java.math.BigDecimal;
 
 public class Main {
@@ -9,10 +12,14 @@ public class Main {
         System.out.println("================");
 
         Account myAccount = new Account("AT0001", "Mirac Ülger");
-        myAccount.deposit(new BigDecimal("99.99"));
-        myAccount.withdraw(new BigDecimal("49.99"));
-        myAccount.getBalance();
+        Account hisAccount = new Account("AT0002", "Alice Werner");
+        Transaction transactionToWerner = new Transaction(new BigDecimal("30.00"), "AT0002", TransactionType.TRANSFER);
+
+        myAccount.deposit(new BigDecimal("100.00"));
+
         System.out.println(myAccount.getBalance());
+        System.out.println(transactionToWerner.getAmount());
+
     }
 
 
