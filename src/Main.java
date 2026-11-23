@@ -18,7 +18,7 @@ public class Main {
         myAccount.deposit(new BigDecimal("100.00"));
 
         System.out.println(myAccount.getBalance());
-        System.out.println(transactionToWerner.getAmount());
+        System.out.println(transactionToWerner.getTransactionInformation());
 
     }
 

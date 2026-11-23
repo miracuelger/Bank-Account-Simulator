@@ -33,4 +33,8 @@ public class Transaction {
     public TransactionType getTransactionType() {
         return transactionType;
     }
+
+    public String getTransactionInformation() {
+        return getDate() + " | " + getAccountNumber() + " | " + getAmount() + " | " + getTransactionType();
+    }
 }
